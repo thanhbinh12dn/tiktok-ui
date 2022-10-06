@@ -3,6 +3,9 @@
 
 :root {
     --primary: #fe2c55;
+    --black: #000;
+    --text-color: #333;
+    --bg-hover-color: rgba(22, 24, 35, .03);
     //Default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
@@ -23,4 +26,16 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed; //tối ưu font chữ làm sao để hiển thị nhanh nhất
+    color: var(--text-color);
+
+}
+
+button, input, [tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }
