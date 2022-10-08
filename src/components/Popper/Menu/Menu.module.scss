@@ -1,0 +1,23 @@
+//Menu wrapper
+.menu-list {
+    width: 224px;
+
+    .menu-item {
+        margin-left: 0;
+    }
+}
+
+.menu-popper {
+    padding-bottom: 8px;
+}
+
+// Menu item
+.menu-item {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 0;
+    padding: 11px 7px;
+    &:hover {
+        background-color: var(--bg-hover-color);
+    }
+}
