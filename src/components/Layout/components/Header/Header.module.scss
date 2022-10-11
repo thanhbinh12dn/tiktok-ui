@@ -20,82 +20,6 @@
     align-items: center;
 }
 
-.search,
-.search-result {
-    width: 361px;
-}
-
-.search {
-    position: relative;
-    height: var(--search-height);
-    background-color: rgba(22, 24, 35, .06);
-    display: flex;
-    padding-left: 16px;
-    border-radius: var(--search-border-radius);
-    border: 1.5px solid transparent;
-    // background-color: #333;
-    input {
-        height: 100%;
-        flex: 1;
-        background-color: transparent;
-        font-size: 1.6rem;
-        color: var(--black);
-        caret-color: var(--primary);
-    }
-
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: rgba(22, 24, 35, 0.75);;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: var(--search-top-spacer);
-        right: var(--search-button-width);
-        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
-        width: 1px;
-        background-color: rgba(22, 24, 35, .12);;
-    }
-
-    &:focus-within {
-        border-color: rgba(22, 24, 35, .2);
-    }
-}
-
-.search-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    padding: 5px 12px;
-    color: rgba(22, 24, 35, 0.5);
-}
-
-.clear,
-.loading {
-    position: absolute;
-    right: calc(var(--search-button-width) + 16px);
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(22, 24, 35, 0.34);;
-}
-
-.search-btn {
-    width: var(--search-button-width);
-    height: 100%;
-    border-top-right-radius: var(--search-border-radius);
-    border-bottom-right-radius: var(--search-border-radius);
-    font-size: 1.8rem;
-    color: rgba(22, 24, 35, 0.34);
-    line-height: 1.8rem;
-    &:hover {
-        cursor: pointer;
-        background-color: var(--bg-hover-color);
-    }
-
-    &:active {
-        background-color: rgba(22, 24, 35, .06);
-    }
-}
-
 //Action
 .actions {
     display: flex;
@@ -111,6 +35,7 @@
 }
 
 .action-btn {
+    position: relative;
     display: flex;
     align-items: center;
     font-size: 2.2rem;
@@ -118,6 +43,22 @@
     background-color: transparent;
     padding: 4px 10px;
     cursor: pointer;
+}
+
+.action-notice {
+    position: absolute;
+    top: -3px;
+    right: 0;
+    padding: 0 6px;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: 'ProximaNova', sans-serif;
+    min-width: 25px;
+    border-radius: 10px;
 }
 
 .user-avatar {
