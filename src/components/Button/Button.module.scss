@@ -5,6 +5,7 @@
     min-width: 100px;
     font-size: 1.6rem;
     font-weight: 700;
+    font-family: 'ProximaNova', sans-serif;
     padding: 8px 7px;
     border-radius: 4px;
     background-color: var(--white);
@@ -83,6 +84,7 @@
     line-height: 1.8rem;
     border-radius: 0;
     border-color: rgba(22, 24, 35, 0.12);
+    margin-right: 10px;
 
     &:hover {
         background-color: var(--bg-hover-color);

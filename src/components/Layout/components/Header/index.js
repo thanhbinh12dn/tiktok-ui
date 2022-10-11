@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleQuestion, faCircleXmark, faCoins, faEarthAsia, faEllipsisVertical, faGear, faKeyboard, faMagnifyingGlass, faMessage, faPlus, faSignOut, faSpinner, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faCircleQuestion, faCircleXmark, faCoins, faEarthAsia, faEllipsisVertical, faGear, faKeyboard, faMagnifyingGlass, faPlus, faSignOut, faSpinner, faUser } from '@fortawesome/free-solid-svg-icons'
 import Tippy from '@tippyjs/react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
@@ -12,6 +12,8 @@ import styles from './Header.module.scss'
 import images from '~/assets/images'
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu'
+import { InboxIcon, MessageIcon } from '~/components/Icons';
+import Image from '~/components/Image'
 
 const cx = classNames.bind(styles)
 
@@ -135,7 +137,16 @@ function Header() {
                             delay={[0, 200]}
                         >
                             <button className={cx('action-btn')}>
-                                <FontAwesomeIcon icon={faMessage}/>
+                                <MessageIcon/>
+                            </button>
+                        </Tippy>
+                        <Tippy 
+                            content="Hộp thư" 
+                            placement="bottom"
+                            delay={[0, 200]}
+                        >
+                            <button className={cx('action-btn')}>
+                                <InboxIcon/>
                             </button>
                         </Tippy>
                     </>
@@ -153,10 +164,10 @@ function Header() {
                     onChange={handleMenuChange}
                 >
                     {currentUser ? (
-                        <img 
+                        <Image 
                             className={cx('user-avatar')} 
-                            src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65d3c6b1d1e205c75536ccf1f26d552d~c5_100x100.jpeg?x-expires=1665558000&x-signature=5YrbYkBtX6T346oBqd1MLmA5HYg%3D" 
-                            alt="Nguyen Van A"
+                            src="ahttps://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65d3c6b1d1e205c75536ccf1f26d552d~c5_100x100.jpeg?x-expires=1665558000&x-signature=5YrbYkBtX6T346oBqd1MLmA5HYg%3D" 
+                            fallback="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/fac92301a36c2275c99f393061ef04ca~c5_100x100.jpeg?x-expires=1665644400&x-signature=QvwPZAqj9G%2FU4bJeZnOL%2FmZgFsQ%3D"
                         />
                     ) : (
                         <button className={cx('more-btn')}>
