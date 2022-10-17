@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.logo-link {
+    display: flex;
+}
+
 //Action
 .actions {
     display: flex;
@@ -45,10 +49,25 @@
     cursor: pointer;
 }
 
+.action-message {
+    margin-left: 9px;
+    padding: 3px 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.action-inbox {
+    position: relative;
+    margin-left: 19px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
 .action-notice {
     position: absolute;
-    top: -3px;
-    right: 0;
+    top: -7px;
+    right: -10px;
     padding: 0 6px;
     height: 2rem;
     line-height: 2rem;
@@ -56,7 +75,7 @@
     color: var(--white);
     font-size: 1.4rem;
     font-weight: 600;
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(--font-family);
     min-width: 25px;
     border-radius: 10px;
 }
@@ -66,7 +85,7 @@
     height: 32px;
     object-fit: cover;
     border-radius: 50%;
-    margin-left: 12px;
+    margin-left: 24px;
     cursor: pointer;
 }
 

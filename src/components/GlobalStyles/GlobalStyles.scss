@@ -7,6 +7,9 @@
     --text-color: #161823;
     --white: #fff;
     --bg-hover-color: rgba(22, 24, 35, .03);
+
+    --font-family: 'ProximaNova', sans-serif;
+
     //Default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
@@ -24,7 +27,7 @@ html {
 }
 
 body {
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed; //tối ưu font chữ làm sao để hiển thị nhanh nhất
